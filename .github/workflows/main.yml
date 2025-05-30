@@ -2,7 +2,7 @@ name: Auto Post Singapore Result
 
 on:
   schedule:
-    - cron: '40 10 * * *'  # Jam 17:40 WIB (10:40 UTC)
+    - cron: '0 * * * *'  # Setiap jam (UTC)
   workflow_dispatch:
 
 jobs:
