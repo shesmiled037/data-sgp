@@ -2,7 +2,7 @@ name: Auto Post Singapore Result
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Setiap jam (UTC)
+    - cron: '0 * * * *'   # Tepat setiap jam (UTC)
   workflow_dispatch:
 
 jobs:
@@ -21,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install playwright
+          playwright install chromium
 
-      - name: Run Singapore result script
+      - name: Jalankan Script Singapore
         env:
           WP_USER: ${{ secrets.WP_USER }}
           WP_PASS: ${{ secrets.WP_PASS }}
