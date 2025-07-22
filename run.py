@@ -16,7 +16,7 @@ def ambil_tabel_sgp():
             browser = p.chromium.launch(headless=True)
             page = browser.new_page()
 
-            url = "http://146.190.92.226/data-keluaran-singapore/"
+            url = "http://206.189.86.19/data-keluaran-singapore/"
 
             # Tambahkan retry maksimal 3x
             for attempt in range(3):
